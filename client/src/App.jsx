@@ -1,44 +1,9 @@
 import React from 'react';
 import { Button } from '@material-ui/core';
+import SignIn from './components/Signin.jsx';
 
 
-// let List = (props) => (
-//   <ul>
-//      {props.movies.map((e,i) => <li key={i}>{`xxxx   `}{e.title}</li>)}
-//   </ul>
-// );
 
-
-// class Search extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//         searchTerm: ''
-//     }
-//   }
-//     handleSubmit = (e) => {
-//       e.preventDefault();
-//       this.props.handleSubmit((this.state.searchTerm))
-//     }
-//     handleChange = (e) => {
-//       e.preventDefault();
-//       this.setState({ searchTerm: e.target.value.toLowerCase() })
-//     }
-//     render() {
-//       return (
-//         <form onSubmit={this.handleSubmit}>
-//             <input
-//               type='search'
-//               name='search'
-//               placeholder='Search...'
-//               value={this.state.searchTerm}
-//               onChange={this.handleChange}
-//             />
-//             <input type="submit" value='GO!' />
-//         </form>
-//       );
-//     }
-//   }
 
 
 
@@ -122,7 +87,13 @@ import { Button } from '@material-ui/core';
 // }
 
 
-const App = () => <Button color="primary">Hello World</Button>;
-
+const App = () => {
+    return (
+        <div>
+            <SignIn />
+            <Button color="primary">Yellllooo World</Button>;
+        </div>
+    )
+}
 
 export default App;
