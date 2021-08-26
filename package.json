@@ -8,6 +8,8 @@
   "scripts": {
     "make-model": "npx sequelize-cli model:generate --name user --attributes name:string,email:string,password:string",
     "migrate-db": "npx sequelize-cli db:migrate",
+    "db-drop": "npx sequelize-cli db:drop",
+    "db-create": "npx sequelize-cli db:create",
     "start": "nodemon server/index.js",
     "react-dev": "webpack --config ./webpack.config.js --mode development -w"
   },
@@ -26,6 +28,7 @@
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
     "axios": "^0.21.1",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "g": "^2.0.1",
     "material-ui": "^0.20.2",

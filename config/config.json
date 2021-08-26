@@ -2,21 +2,21 @@
   "development": {
     "username": "keefedashiell",
     "password": null,
-    "database": "mvp",
+    "database": "cocktails",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
     "username": "keefedashiell",
     "password": null,
-    "database": "mvp",
+    "database": "cocktails",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
     "username": "keefedashiell",
     "password": null,
-    "database": "mvp",
+    "database": "cocktails",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }

@@ -5,7 +5,6 @@ const PORT = 5000 || process.env.PORT;
 
 app.use(express.static('client/dist'));
 app.use(express.json());
-
 app.use('/', router);
 
 app.listen(PORT, () => {

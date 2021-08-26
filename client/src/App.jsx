@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Button } from '@material-ui/core';
 import SignIn from './components/Signin.jsx';
-import RecipeReviewCard from './components/RecipeReviewCard.jsx'
+import Cocktails from './components/Cocktails.jsx'
 
 import {
   BrowserRouter as Router,
@@ -12,15 +12,31 @@ import {
 
 
 const App = () => {
+    const [currentView, setView] = useState('signin');
     return (
-        <Router>
-            <SignIn />
-            <RecipeReviewCard />
-        </Router>
+        <div>
+            {   currentView ?
+                <SignIn setView={setView} /> :
+                <Cocktails />
+            }
+        </div>
+
     )
 }
 
 export default App;
+
+{/* <Router>
+            <Switch>
+                <Route path="/" exact>
+                    <SignIn />
+                </Route>
+
+                <Route path="/cocktails" exact>
+                    <RecipeReviewCard />
+                </Route>
+            </Switch>
+        </Router> */}
 
 // class Add extends React.Component {
 //   constructor(props) {

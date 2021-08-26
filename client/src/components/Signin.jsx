@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+// import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
@@ -39,8 +40,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const SignIn = () => {
+const SignIn = ({ setView }) => {
   const classes = useStyles();
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [formVals, setFormVals] = useState({
     email: '',
     password: ''
@@ -55,14 +57,25 @@ const SignIn = () => {
     e.preventDefault();
     const postData = async (data) => {
       console.log(data)
-      // try {
-      //   let user = await axios.post('/user', data);
-      // } catch(err) {
-      //   console.error(err);
-      // }
+      try {
+        let user = await axios.post('/user', data);
+        setFormVals({
+          email: '',
+          password: ''
+        });
+        setView(false)
+
+        // if (user) setIsLoggedIn(true);
+      } catch(err) {
+        console.error(err);
+      }
     }
     postData(formVals);
   }
+
+  // if (isLoggedIn) {
+  //   <Redirect to='/cocktails' />
+  // }
 
   return (
     <Container component="main" maxWidth="xs">
