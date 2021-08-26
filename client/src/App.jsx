@@ -1,11 +1,26 @@
 import React from 'react';
 import { Button } from '@material-ui/core';
 import SignIn from './components/Signin.jsx';
+import RecipeReviewCard from './components/RecipeReviewCard.jsx'
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 
+const App = () => {
+    return (
+        <Router>
+            <SignIn />
+            <RecipeReviewCard />
+        </Router>
+    )
+}
 
-
-
+export default App;
 
 // class Add extends React.Component {
 //   constructor(props) {
@@ -86,14 +101,3 @@ import SignIn from './components/Signin.jsx';
 //   }
 // }
 
-
-const App = () => {
-    return (
-        <div>
-            <SignIn />
-            <Button color="primary">Yellllooo World</Button>;
-        </div>
-    )
-}
-
-export default App;
